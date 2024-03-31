@@ -7,16 +7,9 @@ import { Page1Component } from './components/page1/page1.component';
 import { Page2Component } from './components/page2/page2.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    Page1Component,
-    Page2Component
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, Page1Component, Page2Component],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

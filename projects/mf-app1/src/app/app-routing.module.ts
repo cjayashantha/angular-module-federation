@@ -1,25 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { Page1Component } from './components/page1/page1.component';
-import { Page2Component } from './components/page2/page2.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: Page1Component,
-  },
-  {
-    path: 'page-1',
-    component: Page1Component,
-  },
-  {
-    path: 'page-2',
-    component: Page2Component,
-  },
-];
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot([
+      {
+        path: '',
+        loadChildren: () => import('./app1.module').then((m) => m.App1Module),
+      },
+    ]),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
